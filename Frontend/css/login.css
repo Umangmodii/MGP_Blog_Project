@@ -1,0 +1,68 @@
+
+.login-container {
+    max-width: 400px;
+    margin: 60px auto 60px auto;
+    padding: 30px 30px 22px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(41, 41, 55, 0.11), 0 2px 3px rgba(0,0,0,0.04);
+}
+.login-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 28px;
+    color: #222859;
+    font-weight: bold;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #585887;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 6px;
+    border: 1px solid #d4d9ef;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background: #f6f7fa;
+    transition: border 0.2s;
+}
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border: 1.5px solid #3c59e7;
+    background: #fff;
+}
+.login-form button {
+    width: 100%;
+    padding: 11px 0;
+    background: #222859;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.09rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    transition: background 0.18s;
+}
+.login-form button:hover {
+    background: #131641;
+    cursor: pointer;
+}
+.login-form .form-link {
+    text-align: right;
+    margin-top: 8px;
+}
+.login-form .form-link a {
+    color: #3c59e7;
+    text-decoration: none;
+    font-size: 0.97rem;
+}
+.login-form .form-link a:hover {
+    text-decoration: underline;
+}

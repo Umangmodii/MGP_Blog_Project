@@ -67,6 +67,7 @@
 				<li><a class="font_tag" href="blog_detail.php">Blog Detail</a></li>
 				<li><a class="font_tag" href="service.php">Services</a></li>
 				<li><a class="font_tag" href="contact.php">Contact Us</a></li>
+
 				<li class="dropdown">
 						  <a class="font_tag border_none" href="#" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
 						  <ul class="dropdown-menu drop_1" role="menu">
@@ -75,7 +76,10 @@
 							<li><a href="service.php">Services</a></li>
 							<li><a href="contact.php">Contact Us</a></li>
 						  </ul>
-						</li>
+				</li>
+
+                <li><a class="font_tag active_tab" href="login.php">Login</a></li>
+                
 			</ul>
 			
 		</div><!-- /.nav-collapse -->
