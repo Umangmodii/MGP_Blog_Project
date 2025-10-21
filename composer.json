@@ -1,0 +1,11 @@
+{
+    "name": "mgp/blog-project",
+    "description": "MGP Blog Project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MGP"
+        }
+    ],
+    "require": {}
+}
