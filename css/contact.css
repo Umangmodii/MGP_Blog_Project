@@ -1,0 +1,55 @@
+/*
+Template Name:Electronica
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************contact****************/
+.center_contact{
+padding-top:70px;
+padding-bottom:40px; 
+ }
+.contact_2l .form-control{
+margin-top:15px;
+height:40px; 
+width:70%;
+ }
+.contact_2l h6{
+margin-top:15px; 
+ }
+.contact_2l .form_1{
+height:150px;
+ }
+.contact_2 {
+margin-top:20px;
+ }
+/*********************contact_end****************/
+
+@media screen and (max-width : 767px){
+.center_contact {
+ text-align:center;
+ padding-top:40px;
+ }
+.contact_2l .form-control{
+margin-left:auto;
+margin-right:auto; 
+ }
+.contact_2r {
+margin-top:15px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1260px) {
+
+ }
+
+
+
+

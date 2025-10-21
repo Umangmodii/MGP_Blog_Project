@@ -1,0 +1,128 @@
+/*
+Template Name:Electronica
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************shop****************/
+.center_shop{
+padding-top:60px;
+padding-bottom:20px;  
+  }
+.center_shop_2l h5 i{
+ color:#f47629;
+ margin-right:5px;
+ font-size:16px; 
+  }
+.center_shop_2l h5{
+ padding-left:15px;
+ padding-right:15px;
+ }
+.center_shop_2l{
+box-shadow: 0 0 10px rgba(0,0,0,0.6);
+ padding:15px 20px 20px 20px;
+ }
+.center_shop_2lir p{
+ font-size:15px;
+ line-height:1.2em;
+ }
+.center_shop_2lir span{
+display:block;
+margin-top:5px;
+ }
+.center_shop_2lir h4{
+margin-top:5px;
+ }
+.center_shop_2li{
+margin-top:15px;
+padding-bottom:15px;
+border-bottom:1px solid #ddd; 
+ }
+ 
+.center_product_1r2r h5{
+display:inline-block;
+margin-right:10px; 
+ }
+.center_product_1r2r .form-control{
+display:inline-block;
+width:50%; 
+border-radius:0;
+ }
+.center_product_1r2{
+background:#f4f4f4;
+padding-top:10px;
+padding-bottom:10px;
+ }
+.center_product_1r2l{
+ padding-top:6px;
+ }
+.center_shop_2{
+margin-top:30px; 
+ }
+.center_shop_2ri span{
+margin-top:15px;
+display:block; 
+ }
+.center_shop_2rii{
+box-shadow: 0 0 10px rgba(0,0,0,0.6);
+padding:15px; 
+ }
+.center_shop_2ri{
+margin-top:30px; 
+ }
+ 
+.center_product_1r4r ul li a{
+color:#333; 
+ }
+.center_product_1r4r ul li a:hover{
+background: #f47629;
+color:#fff;
+border-color:#f47629;
+ }
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+background: #f47629;
+color:#fff;
+border-color:#f47629;
+ }
+.center_product_1r4r{
+margin-top:30px; 
+ }
+/*********************shop_end****************/
+
+@media screen and (max-width : 767px){
+.center_shop {
+ text-align:center;
+ padding-top:40px;
+ }
+.center_shop_2lir {
+margin-top:10px; 
+ }
+.center_product_1r2r {
+  text-align:center;
+  margin-top:10px;
+ }
+.center_shop_2r {
+margin-top:15px; 
+ }
+.center_product_1r4r {
+ text-align:center; 
+ }
+.pagination>li>a, .pagination>li>span{
+padding:6px 10px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1260px) {
+
+ }
+
+
+
+
