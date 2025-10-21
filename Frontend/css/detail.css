@@ -1,0 +1,237 @@
+/*
+Template Name:Electronica
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************detail****************/
+.center_shop{
+padding-top:60px;
+padding-bottom:40px;  
+  }
+.center_shop_2l h5 i{
+ color:#f47629;
+ margin-right:5px;
+ font-size:16px; 
+  }
+.center_shop_2l h5{
+ padding-left:15px;
+ padding-right:15px;
+ }
+.center_shop_2l{
+box-shadow: 0 0 10px rgba(0,0,0,0.6);
+ padding:15px 20px 20px 20px;
+ }
+.center_shop_2lir p{
+ font-size:15px;
+ line-height:1.2em;
+ }
+.center_shop_2lir span{
+display:block;
+margin-top:5px;
+ }
+.center_shop_2lir h4{
+margin-top:5px;
+ }
+.center_shop_2li{
+margin-top:15px;
+padding-bottom:15px;
+border-bottom:1px solid #ddd; 
+ }
+ 
+.center_shop_2{
+margin-top:30px; 
+ }
+ 
+/* Indicators list style */
+.article-slide .carousel-indicators {
+    bottom: -90px;
+    left: 0;
+    margin-left: 5px;
+    width: 100%;
+}
+/* Indicators list style */
+.article-slide .carousel-indicators li {
+    border: medium none;
+    border-radius: 0;
+    float: left;
+    height: 65px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px !important;
+    margin-top: 0;
+    width: 23%;
+}
+/* Indicators images style */
+.article-slide .carousel-indicators img {
+    border: 2px solid #FFFFFF;
+    float: left;
+    height: 65px;
+    left: 0;
+    width: 100%;
+}
+/* Indicators active image style */
+.article-slide .carousel-indicators .active img {
+    border: 2px solid #f47629;
+    opacity: 0.7;
+}
+
+.center_shop_1ri h6 span {
+    margin-right: 10px;
+}
+.center_shop_1ri h6 span i {
+    color: #FFCC66;
+	font-size:14px;
+}
+.center_shop_1ri h4 span {
+    color: #ddd;
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+.center_shop_1ri .input-group {
+    margin-top: 20px;
+    width: 25%;
+	float:left;
+	margin-right:20px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #f47629;
+    font-weight: bold;
+}
+.center_shop_2ri ul li a{
+ background:none;
+ font-weight:bold;
+  }
+.center_shop_2ri ul li a:hover{
+ color:#f47629;
+  background:none;
+  }
+.click {
+    padding: 20px 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+.click_inner ul {
+    margin-top: 10px;
+    list-style: disc;
+    padding-left: 20px;
+    color: #666;
+}
+blockquote{
+border-color:#f47629;
+margin-top:20px;
+margin-bottom:0;
+ }
+.click_inner_2i h6 span{
+ color: #FFCC66;
+ margin-right:10px;
+ }
+.click_inner_2i h6 {
+margin-top:20px; 
+ }
+.click_inner_2i{
+ border-bottom:1px solid #ddd;
+ padding-bottom:20px;
+ }
+.click_inner_2i1 span{
+ color: #FFCC66;
+ }
+.click_inner_2i1{
+border-bottom:1px solid #ddd;
+padding-bottom:20px; 
+padding-top:20px; 
+ }
+.center_shop_3 .carousel-inner{
+margin-top:20px!important; 
+ }
+.center_shop_3 .center_shop_1li1{
+margin-top:20px!important; 
+ }
+.center_shop_2r{
+ margin-top:80px;
+ }
+.pd1 {
+    padding-bottom: 0!important;
+}
+.list_1 {
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.center_shop_2rii{
+box-shadow: 0 0 10px rgba(0,0,0,0.6);
+padding:15px; 
+ }
+.center_shop_2r1i span{
+margin-top:15px;
+display:block; 
+ }
+.center_shop_2r1e{
+margin-top:5px; 
+margin-bottom:20px; 
+ }
+/*********************detail_end****************/
+
+@media screen and (max-width : 767px){
+.center_shop {
+ text-align:center;
+ padding-top:40px;
+ }
+.center_shop_2lir {
+margin-top:10px; 
+ }
+.detail_r {
+margin-top:15px; 
+ }
+.article-slide .carousel-indicators li{
+width:22%;
+}
+.center_shop_1ri {
+margin-top:100px; 
+ }
+.center_shop_1ri .input-group{
+width:50%;
+margin-left:auto;
+margin-right:auto; 
+float:none;
+ }
+.click_inner_2i h5{
+margin-top:15px!important;
+text-align:center; 
+ }
+.center_shop_2r1i {
+margin-top:15px; 
+ }
+.center_shop_2r{
+ margin-top:30px;
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.article-slide .carousel-indicators li{
+width:22%; 
+ }
+.center_shop_1ri .input-group{
+ width:40%;
+ }
+.center_shop_2r{
+ margin-top:30px;
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.center_shop_1ri .input-group{
+ width:30%;
+ }
+.center_shop_2r{
+ margin-top:30px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1260px) {
+
+ }
+
+
+
+

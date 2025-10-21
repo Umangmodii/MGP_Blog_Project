@@ -1,0 +1,187 @@
+/*
+Template Name:Electronica
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************blog_detail****************/
+.center_shop{
+padding-top:60px;
+padding-bottom:40px;  
+  }
+.blog_1{
+margin-top:30px;  
+  }
+.blog_1l h2 span{
+background:#f47629;
+padding:10px;
+display:inline-block;
+color:#fff;
+font-size:24px;
+vertical-align:middle;
+margin-right:10px;  
+  }
+.para_1{
+ border-color:#f47629;
+ margin-top:20px; 
+  }
+.blog_1l{
+margin-top:30px; 
+ }
+
+.center_product_1r4r ul li a{
+color:#333; 
+ }
+.center_product_1r4r ul li a:hover{
+background: #f47629;
+color:#fff;
+border-color:#f47629;
+ }
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+background: #f47629;
+color:#fff;
+border-color:#f47629;
+ }
+.center_product_1r4r{
+margin-top:30px; 
+ }
+.blog_1r .input-group{
+margin-top:20px; 
+ }
+.blog_1r .form-control{
+height:45px;
+ }
+.blog_1r .btn{
+background: #f47629;
+border-color: #f47629;
+padding:11.5px 16px;
+ }
+.blog_1r ul li a:hover{
+ color: #f47629;
+ }
+.blog_1r ul li a i{
+ color: #f47629;
+ margin-right:5px;
+ font-size:12px;
+ }
+.blog_1r ul li{
+border-bottom:1px solid #ddd;
+padding-bottom:10px;
+margin-top:10px;
+ }
+.blog_1r1 ul li{
+display:inline-block;
+margin:3px 5px; 
+ }
+.blog_1r1 ul li a{
+display:block;
+border:1px solid #f47629;
+padding:5px;
+border-radius:5px;
+font-size:14px; 
+ }
+.blog_1r1 ul li a:hover{
+background:#f47629;
+color:#fff; 
+ }
+.blog_1r1i{
+margin-top:15px; 
+ }
+ 
+.blog_1r1i h5 .span_1{
+background:#f47629;
+padding:10px;
+display:inline-block;
+color:#fff;
+margin-right:10px;  
+  }
+.blog_1r1i h5 .span_2{
+display:inline-block;
+margin-top:8px; 
+ }
+
+.blog_1l1{
+ margin-top:20px;
+ padding-top:20px;
+ border-top:1px solid #ddd;
+ }
+.blog_1l2l span i{
+background:#999;
+color:#fff;
+width:70px;
+height:70px;
+line-height:70px;
+display:inline-block;
+text-align:center;
+font-size:45px;
+border-radius:50%;  
+  }
+.blog_1l2{
+margin-top:20px; 
+ }
+.detail_hli3{
+border:1px solid #ddd;
+padding: 20px 5px 20px 20px;
+margin-top:30px; 
+ }
+.detail_hli3i .form-control{
+height:45px;
+margin-top:20px; 
+ }
+.detail_hli3i .form_1{
+height:135px;
+ }
+/*********************blog_detail_end****************/
+
+@media screen and (max-width : 767px){
+.center_shop {
+ text-align:center;
+ padding-top:40px;
+ }
+.blog_1l2r {
+margin-top:10px; 
+ }
+.blog_1l2r  span{
+float:none!important;
+display:block;
+margin-top:10px; 
+ }
+.blog_1r {
+margin-top:20px;
+ }
+.blog_1r1i  .span_2{
+float:none!important;
+margin-left:10px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.blog_1l2l span i{
+width:40px;
+height:40px;
+line-height:40px;
+font-size:16px; 
+ }
+.blog_1r1i h5{
+ font-size:13px;
+ }
+.blog_1r1i h5 .span_1{
+margin-right:5px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.blog_1l2l span i{
+width:50px;
+height:50px;
+line-height:50px;
+font-size:26px; 
+ }
+ }
+@media (min-width:1201px) and (max-width:1260px) {
+
+ }
+
+
+
+

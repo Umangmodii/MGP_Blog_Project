@@ -1,0 +1,361 @@
+/*
+Template Name:Electronica
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+/*********************center_home****************/
+.mySlides {
+display:none;
+}
+.center_main{
+  position:relative;
+  }
+.center_main_1{
+  position:absolute;
+  bottom:15%;
+  left:25%;
+  background:#00000057;
+  width:50%;
+  padding:30px 10px 45px 10px;
+  }
+.center_main_1 h1{
+  color:#fff;
+  font-size:60px;
+  }
+.center_main_1 p{
+color:#eee;
+  }
+.center_main_1 h4{
+color:#eee;
+  }
+/*********************center_home_end****************/
+
+/*********************request****************/
+#request{
+margin-top:-46px; 
+ }
+.request_1 h4{
+ background:#f47629;
+ color:#fff;
+ width:30%;
+ text-align:center;
+ padding-top:10px;
+ padding-bottom:10px;
+ border-radius:10px 10px 0px 0px;
+ }
+.request_2{
+ background:#252936;
+ padding:20px;
+ margin-left:15px;
+ margin-right:15px;
+ }
+.request_2 .form-control{
+display:inline-block;
+border-radius:5px;
+width:27.5%; 
+float:left;
+margin-right:10px;
+height:53px;
+font-size:16px;
+ }
+.request_2 h4{
+display:inline-block;
+ }
+/*********************request_end****************/
+
+/*********************about_home****************/
+#about_home{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.about_home_2{
+margin-top:30px; 
+ }
+.about_home_2r ul li{
+ margin-top:10px;
+ }
+.about_home_2r ul li i{
+ margin-right:10px;
+ font-size:14px;
+ }
+/*********************about_home_end****************/
+
+/*********************info****************/
+#info{
+ background:#252936;
+ padding-top:45px;
+ padding-bottom:45px;
+ }
+.info_1i{
+ background-image: url(../img/7.jpg);
+ background-position:center;
+  transform: rotate(-15deg);
+ }
+.info_1i:hover{
+  transform: rotate(0deg);
+ }
+.info_1io{
+ background-image: url(../img/5.jpg);
+  background-position:center;
+ }
+.info_1io1{
+ background-image: url(../img/6.jpg);
+  background-position:center;
+ }
+.info_1im{
+ padding:160px 40px;
+ background: #00000052;
+ }
+/*********************info_end****************/
+
+/*********************serv_home****************/
+#serv_home{
+ padding-top:40px;
+ padding-bottom:40px;
+ }
+.serv_home_1{
+margin-top:30px; 
+ }
+.serv_home_1i span {
+width:120px;
+height:120px; 
+line-height:115px;
+font-size:80px;
+color:#f47629;
+text-align:center;
+display:inline-block;
+border-radius:50%;
+ }
+.serv_home_1i span:hover{
+background:#f47629;
+color:#fff; 
+ }
+/*********************serv_home_end****************/
+
+/*********************help****************/
+#help{
+background:#252936;
+padding-top:50px;
+padding-bottom:50px;
+ }
+.help_1 h5{
+display:inline-block;
+margin-right:10px;
+margin-left:10px; 
+ }
+/*********************help_end****************/
+
+/*********************switch****************/
+#switch{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.switch_1i img{
+opacity:0.7; 
+ }
+.switch_1i img:hover{
+opacity:1; 
+ }
+/*********************switch_end****************/
+
+/*********************appointment****************/
+#appointment{
+  padding-top:40px;
+  padding-bottom:40px;
+  background:#f4f4f4;
+  }
+.appointment_1i {
+  margin-top:20px;
+  }
+.appointment_1i .form-control{
+  width:25%;
+  display:inline-block;
+  height:50px;
+  margin-left:5px;
+  margin-right:5px;
+  }
+/*********************appointment_end****************/
+
+/*********************plan****************/
+#plan{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.plan_1ii {
+ background:#f4f4f4;
+ padding:20px 15px;
+ }
+.plan_1ii h4 span {
+font-size:50px;
+vertical-align:middle; 
+ }
+.plan_1ii1 ul li i{
+margin-right:5px;
+font-size:14px;
+color:#f47629; 
+ }
+.plan_1ii1 ul li {
+margin-bottom:10px;
+padding-bottom:10px;
+border-bottom:1px solid #ddd;
+ }
+.plan_1i{
+box-shadow: 0 0 10px rgba(0,0,0,0.6);  
+ }
+.plan_1ii1{
+padding:30px 20px; 
+ }
+.plan_1{
+margin-top:30px; 
+ }
+.plan_1iio{
+background:#252936; 
+ }
+/*********************plan_end****************/
+
+/*********************proj_h****************/
+#proj_h{
+background:#f4f4f4;
+padding-top:50px;
+padding-bottom:50px; 
+ }
+.proj_h1i {
+    background: #fff;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    border-radius: 3px;
+}
+.proj_h1i span i{
+font-size:60px;
+color:#666;  
+ }
+/*********************proj_h_end****************/
+
+/*********************trend****************/
+#trend{
+ padding-top:40px;
+ padding-bottom:40px;
+ }
+.trend_1ir{
+ border-top:4px solid #f47629;
+ padding:20px;
+ background:#f4f4f4;
+ }
+.trend_1{
+margin-top:30px; 
+ }
+/*********************trend_end****************/
+
+
+@media screen and (max-width : 767px){
+.center_home img{
+min-height:200px;
+  }
+.center_main_1{
+position:static;
+width:100%;
+ }
+.center_main_1 h1{
+ font-size:40px;
+ }
+#request{
+margin-top:40px; 
+text-align:center;
+ }
+.request_1 h4{
+width:70%;
+margin-left:auto;
+margin-right:auto; 
+ }
+.request_2 .form-control{
+ display:block;
+ width:100%;
+ margin-bottom:20px;
+ margin-right:0;
+ }
+#about_home{
+ text-align:center;
+ }
+.about_home_2r{
+ margin-top:15px;
+ }
+.info_1i {
+    transform: rotate(0deg);
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.serv_home_1i{
+margin-top:15px; 
+ }
+.switch_1i{
+margin-top:10px; 
+ }
+.plan_1i{
+margin-top:10px; 
+ }
+.proj_h1i{
+margin-top:10px; 
+ }
+.trend_1ir{
+ text-align:center;
+ margin-bottom:10px;
+ }
+.plan_1ii1 {
+ text-align:center; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.center_main_1 h1{
+ font-size:40px;
+ }
+.center_home img{
+min-height:600px; 
+ }
+.info_1i {
+    transform: rotate(0deg);
+}
+.request_2 .form-control{
+ width:22%;
+ }
+.trend_1il  img{
+min-height:300px; 
+ }
+.trend_1ir  p{
+font-size:12px;
+ }
+.trend_1ir {
+min-height:300px;
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.info_1i {
+    transform: rotate(0deg);
+}
+.center_home img{
+min-height:600px; 
+ }
+.request_2 .form-control{
+ width:26%;
+ }
+.trend_1il  img{
+min-height:300px; 
+ }
+.trend_1ir  p{
+font-size:15px;
+ }
+.trend_1ir {
+min-height:300px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1260px) {
+.info_1i {
+    transform: rotate(0deg);
+}
+ }
+
+
+
+
