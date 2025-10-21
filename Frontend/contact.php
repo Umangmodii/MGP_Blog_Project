@@ -1,4 +1,4 @@
-<!-- 
+
 <?php
 require '../Backend/PHPMailer/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
@@ -6,7 +6,6 @@ use PHPMailer\PHPMailer\Exception;
 
 include '../Backend/Database/connection.php';
 
-// Variable to store the message for feedback
 $contact_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -19,25 +18,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $contact_message = "<div style='color:red;'>Please fill in all required fields.</div>";
     } else {
         $stmt = $conn->prepare("INSERT INTO contacts (name, phone, email, comment) VALUES (?, ?, ?, ?)");
-		
         $stmt->bind_param("ssss", $name, $phone, $email, $comment);
 
         if ($stmt->execute()) {
             $mail = new PHPMailer(true);
             try {
-                // Server settings
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'umangmodi003@gmail.com'; // your gmail
-                $mail->Password   = 'uopekabpdrbuovwn';       // Gmail App 
+                $mail->Username   = 'umangmodi003@gmail.com';
+                $mail->Password   = 'uopekabpdrbuovwn';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
                 $mail->CharSet    = 'UTF-8';
 
                 // Recipients
                 $mail->setFrom($mail->Username, 'Electronics Contact Form');
-                $mail->addAddress($email, $name); // Send to user
+                $mail->addAddress($email, $name);
                 $mail->addReplyTo($mail->Username, 'Electronica Contact Form');
 
                 // Content
@@ -70,8 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?> 
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -101,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</div>
 	<div class="col-sm-4">
 	 <div class="top_1m text-center clearfix">
-	  <h1 class="mgt"><a href="index.php">Electronica <span>Lorem Ipsum Dolor</span></a></h1>
+	  <h1 class="mgt"><a href="index.html">Electronica <span>Lorem Ipsum Dolor</span></a></h1>
 	 </div>
 	</div>
 	<div class="col-sm-4">
@@ -127,26 +122,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.php">Electronica</a>
+			<a class="navbar-brand" href="index.html">Electronica</a>
 		</div>
 		
 		
 		<div class="collapse navbar-collapse js-navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a class="font_tag" href="index.php">Home</a></li>
-				<li><a class="font_tag" href="shop.php">Product</a></li>
-				<li><a class="font_tag" href="detail.php">Detail</a></li>
-				<li><a class="font_tag" href="blog.php">Blog</a></li>
-				<li><a class="font_tag" href="blog_detail.php">Blog Detail</a></li>
-				<li><a class="font_tag" href="service.php">Services</a></li>
-				<li><a class="font_tag active_tab" href="contact.php">Contact Us</a></li>
+				<li><a class="font_tag" href="index.html">Home</a></li>
+				<li><a class="font_tag" href="shop.html">Product</a></li>
+				<li><a class="font_tag" href="detail.html">Detail</a></li>
+				<li><a class="font_tag" href="blog.html">Blog</a></li>
+				<li><a class="font_tag" href="blog_detail.html">Blog Detail</a></li>
+				<li><a class="font_tag" href="service.html">Services</a></li>
+				<li><a class="font_tag active_tab" href="contact.html">Contact Us</a></li>
 				<li class="dropdown">
 						  <a class="font_tag border_none" href="#" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
 						  <ul class="dropdown-menu drop_1" role="menu">
-							<li><a href="blog.php">Blog</a></li>
-							<li><a href="blog_detail.php">Detail</a></li>
-							<li><a href="service.php">Services</a></li>
-							<li><a href="contact.php">Contact Us</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="blog_detail.html">Detail</a></li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
 						  </ul>
 						</li>
 			</ul>
@@ -181,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		  <h3 class="col_1">CONTACT</h3>
 		  <p>Comodous et accusamus et iusto odios un dignissimos ducimus qui blan ditiis prasixer esentium voluptatum un deleniti atqueste sites excep turiitate non providentsimils. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, consequunturser magni halothemes - premium shopify templates & themes sequi nesciunt lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper loremous.</p>
-		
+		  
 		  <form method="post" action="contact.php" id="contactForm">
 		    <div class="form-group">
 		      <label for="name" class="bold">Your Name</label>
@@ -204,56 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		 </div>
 		</div>
-		<div class="col-sm-3">
-		 <div class="contact_2r clearfix">
-		  <h4 class="col_1">CONTACT INFO</h4>
-			<p>We'd love to hear from you - please use the form to send us your message or ideas. Or simply pop in for a cup of fresh tea and a cookie:</p>
-			<p>1234 Ave Dermentum, Onsectetur Adipiscing
-					Tortor Sagittis, CA 123456,
-					United States</p>
-							<p>Email: info@gmail.com<br>
-					Toll-free: (1234) 567 89XY</p>
-							<hr>
-							<p>Opening Hours:<br>
-					Monday to Saturday: 9am - 10pm<br>
-					Sundays: 10am - 6pm</p>
-							</div>
-							</div>
-						</div>
-					</div>
-					</div>	 
-					</section>
- 
-		<section id="footer">
-		<div class="container">
-		<div class="row">
-		<div class="footer_2 clearfix">
 
-		  <h3 class="col_1">CONTACT</h3>
-		  <p>Comodous et accusamus et iusto odios un dignissimos ducimus qui blan ditiis prasixer esentium voluptatum un deleniti atqueste sites excep turiitate non providentsimils. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, consequunturser magni halothemes - premium shopify templates & themes sequi nesciunt lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper loremous.</p>
-		
-		  <form method="post" action="contact.php" id="contactForm">
-		    <div class="form-group">
-		      <label for="name" class="bold">Your Name</label>
-		      <input class="form-control" type="text" name="name" id="name">
-		    </div>
-		    <div class="form-group">
-		      <label for="phone" class="bold">Your Phone</label>
-		      <input class="form-control" type="text" name="phone" id="phone">
-		    </div>
-		    <div class="form-group">
-		      <label for="email" class="bold">Your Email <span class="col_2">*</span></label>
-		      <input class="form-control" type="email" name="email" id="email" required>
-		    </div>
-		    <div class="form-group">
-		      <label for="comment" class="bold">Your Comment <span class="col_2">*</span></label>
-		      <textarea class="form-control form_1" name="comment" id="comment" required></textarea>
-		    </div>
-			<button type="submit" class="button" id="submit-contact" style="margin-top:20px;">SUBMIT CONTACT</button>
-		  </form>
-
-		 </div>
-		</div>
 		<div class="col-sm-3">
 		 <div class="contact_2r clearfix">
 		  <h4 class="col_1">CONTACT INFO</h4>
@@ -280,7 +226,7 @@ Sundays: 10am - 6pm</p>
    <div class="footer_2 clearfix">
     <div class="col-sm-3">
 	 <div class="footer_2i clearfix">
-	    <a class="navbar-brand" href="index.php"> Electronica </a>
+	    <a class="navbar-brand" href="index.html"> Electronica </a>
 	    <p class="col">Choosing the right hospital and physician are important factors to consider that significantly influence a patient’s treatment. The preferred choice for many patients is choosing private care.</p>
 	 </div>
 	</div>
@@ -303,12 +249,12 @@ Sundays: 10am - 6pm</p>
 	  <h4 class="mgt col">Head Office</h4>
 	  <hr>
 	  <p class="col">1096 N Highland St, Arlington
-		VA 130xz, USA<br>
-		info@gmail.com<br>
-		123 4567 89 01</p>
-			<p class="col">Mon-Thu: 9:30 – 21:00<br>
-		Fri: 6:00 – 21:00<br>
-		Sat: 10:00 – 15:00</p>
+VA 130xz, USA<br>
+info@gmail.com<br>
+123 4567 89 01</p>
+     <p class="col">Mon-Thu: 9:30 – 21:00<br>
+Fri: 6:00 – 21:00<br>
+Sat: 10:00 – 15:00</p>
 	 </div>
 	</div>
 	<div class="col-sm-3">
