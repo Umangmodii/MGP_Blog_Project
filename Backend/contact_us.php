@@ -50,7 +50,7 @@ $user_email = $_SESSION['user_email'];
                 </ul>
             </div>
         </nav>
-        <!-- Main Content Area -->
+   
         <main class="col-md-10 ml-sm-auto px-0">
             <div class="admin-header">
                 <div class="admin-logo">
@@ -127,7 +127,6 @@ $user_email = $_SESSION['user_email'];
                             echo '<td>' . htmlspecialchars($row['email']) . '</td>';
                             echo '<td>' . nl2br(htmlspecialchars($row['comment'])) . '</td>';
                             echo '<td>' . htmlspecialchars($row['created_at']) . '</td>';
-                            // Note: The input name and POST key is 'delete_id' (not 'id'), and this matches with our POST handler above.
                             echo '<td>
                                     <form method="POST" action="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=' . $page . '" style="display:inline;">
                                         <input type="hidden" name="delete_id" value="' . htmlspecialchars($row['id']) . '">

@@ -4,143 +4,143 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Electronica</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/blog_detail.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
-	<script src="js/jquery-2.1.1.min.js"></script>
+    <title>Electronica Blogs</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/blog_detail.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </head>
-  
 <body>
 
 <?php
-	include 'header.php';
+include 'header.php';
+require_once __DIR__ . '/../Backend/Database/connection.php';
+
+$blog = null;
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $stmt = $conn->prepare("SELECT * FROM blogs_management WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $blog = $result->fetch_assoc();
+    $stmt->close();
+}
+
+$recent_posts = [];
+$recent_q = $conn->query("SELECT id, title FROM blogs_management ORDER BY published_date DESC, id DESC LIMIT 5");
+while ($row = $recent_q->fetch_assoc()) {
+    $recent_posts[] = $row;
+}
+
+$popular_posts = [];
+$popular_q = $conn->query("SELECT id, title, image, published_date, author, content FROM blogs_management ORDER BY published_date DESC, id DESC LIMIT 2");
+while ($row = $popular_q->fetch_assoc()) {
+    $popular_posts[] = $row;
+}
 ?>
 
-
-
 <section id="center" class="center_shop clearfix">
- <div class="container">
-  <div class="row">
-   <div class="center_shop_1 text-center clearfix">
-    <div class="col-sm-12">
-	 <h1 class="mgt">Blog Detail</h1>
-	</div>
-   </div>
-   <div class="blog_1 clearfix">
-   <div class="col-sm-9">
-    <div class="blog_1l mgt clearfix">
-	 <a href="#"><img src="img/30.jpg" class="iw" alt="abc"></a>
-	 <h2><a href="#"><span>24 Dec </span>Holiday Season by Santa Monica Electrician</a></h2>
-	 <h5>by admin </h5>
-	 <p>If you are interested in purchasing an old building for commercial use or maybe your business is in an old building that needs a serious upgrade, you will need a specialized crew of professionals to make it happen.</p>
-	 <blockquote class="para_1"><p class="mgt">Commercial projects require a different set of skills and talents than the standard residential projects. Everything is on a much bigger scale, including the wiring and electrical needs. For this reason, it is absolutely critical you hire an electrical team that has experience and training to work on commercial projects. A certified electrician on your job ensures everything will be done right and up to code, which means your renovation or upgrade will chug along according to your schedule. The team at The Electric Connection has the commercial experience you want and need.</p></blockquote>
-	 <h5 class="col_1 bold">Dapibus Diam</h5>
-	 <p>It is always best to bring the electrician in at the very beginning of a restoration project. This allows the professional to provide valuable insight and input as to where the wiring needs to be as well as the best type of materials to use for a commercial project. Bringing in the certified professional early on also makes the scheduling of the project much easier. You won’t have to worry about down days or redoing certain areas because the wiring wasn’t put in first. The construction team needs to work together and that means everyone needs to be involved from the get go.</p>
-	 <p>The planning phase is an excellent time to discuss all of the commercial lighting options and various upgrades that can be put in place throughout the building. It is important these are thought about beforehand to make sure the project runs smoothly. Projects that are delayed or run into various hiccups can cost more money and end up pushing back opening dates. Give The Electric Connection a call today and talk with one of our professionals about your commercial building renovation.</p>
-	</div>
-	<div class="blog_1l1 clearfix">
-	  <h5 class="mgt">No Problem with Certified Electrician»</h5>
-	  <h2>One thought on “Electrical Safety this Holiday Season by Santa Monica Electrician”</h2>
-	</div>
-	<div class="blog_1l2 clearfix">
-	 <div class="col-sm-1 space_all">
-	  <div class="blog_1l2l clearfix">
-	   <span><i class="fa fa-user"></i></span>
-	  </div>
-	 </div>
-	 <div class="col-sm-11">
-	  <div class="blog_1l2r clearfix">
-	   <h5 class="bold mgt">admin <span class="pull-right">May 12, 2018 at 2:38 am</span></h5>
-	   <p>The planning phase is an excellent time to discuss all of the commercial lighting options and various upgrades that can be put in place throughout the building.</p>
-	  </div>
-	 </div>
-	</div>
-	<div class="detail_hli3 clearfix">
-        <h2 class="mgt">Leave A Comment</h2>
-		
-		<div class="detail_hli3i clearfix">
-		 <div class="col-sm-6 space_left">
-		  <input class="form-control" placeholder="Full Name" type="text">
-		 </div>
-		 <div class="col-sm-6 space_left">
-		  <input class="form-control" placeholder="Mobile" type="text">
-		 </div>
-		</div>
-		<div class="detail_hli3i clearfix">
-		 <div class="col-sm-6 space_left">
-		  <input class="form-control" placeholder="Email" type="text">
-		 </div>
-		 <div class="col-sm-6 space_left">
-		  <input class="form-control" placeholder="City" type="text">
-		 </div>
-		</div>
-		<div class="detail_hli3i clearfix">
-		 <div class="col-sm-12 space_left">
-		  <textarea class="form-control form_1" placeholder="Write Review"></textarea>
-		 </div>
-		</div>
-		<h5><a class="button" href="#">SUBMIT REVIEW</a></h5>
-	  </div>
-   </div>
-   <div class="col-sm-3">
-    <div class="blog_1r clearfix">
-	 <h2 class="mgt">Search Here</h2>
-	 <div class="input-group">
-		<input type="text" class="form-control" placeholder="Search">
-		<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">
-			<i class="fa fa-search"></i></button>
-		</span>												
-	 </div><br>
-	 <h2>Recent Posts</h2>
-	 <ul>
-	  <li><a href="#"><i class="fa fa-chevron-right"></i> Holiday Season by Santa Monica Electrician</a></li>
-	  <li><a href="#"><i class="fa fa-chevron-right"></i> Commercial Renovation No Problem with Certified Electrician</a></li>
-	  <li><a href="#"><i class="fa fa-chevron-right"></i> Commercial Renovation No Problem with Certified Electrician</a></li>
-	  <li><a href="#"><i class="fa fa-chevron-right"></i> Commercial Renovation No Problem with Certified Electrician</a></li>
-	  <li class="pdb border_none"><a href="#"><i class="fa fa-chevron-right"></i> Don’t get shocked! Install GFCIs… make sure they work.</a></li>
-	 </ul>
-	</div><br>
-	<div class="blog_1r1 clearfix">
-	 <h2>Popular tags</h2>
-	 <ul>
-	  <li><a href="#">Amet</a></li>
-	  <li><a href="#">Dolor</a></li>
-	  <li><a href="#">Ipsum</a></li>
-	  <li><a href="#">Lorem</a></li>
-	  <li><a href="#">Porta</a></li>
-	 </ul>
-	</div><br>
-	<div class="blog_1r1 clearfix">
-	 <h2>Popular Posts</h2>
-	 <div class="blog_1r1i clearfix">
-	 <a href="#"><img src="img/31.jpg" class="iw" alt="abc"></a>
-	 <h5><a href="#"><span class="span_1">24 Dec </span>by admin <span class="pull-right span_2"><i class="fa fa-comment-o"></i> 2</span></a></h5>
-	 <h5 class="bold"><a  href="#">Electrical Safety this Holiday Season by Santa Monica Electrician</a></h5>
-	 <p>Decorating your home and the outdoors is an extremely popular activity starting in about October....</p>
-	</div><br>
-	 <div class="blog_1r1i clearfix">
-	 <a href="#"><img src="img/32.jpg" class="iw" alt="abc"></a>
-	 <h5><a href="#"><span class="span_1">24 Dec </span>by admin <span class="pull-right span_2"><i class="fa fa-comment-o"></i> 2</span></a></h5>
-	 <h5 class="bold"><a  href="#">No Problem with Certified Electrician</a></h5>
-	 <p>Decorating your home and the outdoors is an extremely popular activity starting in about October....</p>
-	</div>
-	</div>
-   </div>
+  <div class="container">
+    <div class="row">
+      <div class="center_shop_1 text-center clearfix">
+        <div class="col-sm-12">
+          <h1 class="mgt">Blog Details</h1>
+        </div>
+      </div>
+      <div class="blog_1 clearfix">
+        <div class="col-sm-9">
+          <?php if ($blog): ?>
+            <div class="blog_1l mgt clearfix" style="margin-bottom:40px; border-bottom: 1px #eee solid;">
+              <img src="<?php echo htmlspecialchars($blog['image'] ? $blog['image'] : 'img/default_blog.jpg'); ?>" class="iw" alt="<?php echo htmlspecialchars($blog['title']); ?>" style="max-width:100%;height:auto;">
+              <h2 class="mt-3">
+                <span>
+                  <?php
+                    if (!empty($blog['published_date'])) {
+                      echo date('d M', strtotime($blog['published_date']));
+                    }
+                  ?>
+                </span>
+                <?php echo htmlspecialchars($blog['title']); ?>
+              </h2>
+              <h5>by <?php echo htmlspecialchars($blog['author'] ?? 'admin'); ?></h5>
+              <article>
+                <p><?php echo nl2br(htmlspecialchars($blog['content'])); ?></p>
+              </article>
+            </div>
+          <?php else: ?>
+            <div class="alert alert-info mt-3">Blog not found.</div>
+          <?php endif; ?>
+        </div>
+        <div class="col-sm-3">
+          <div class="blog_1r clearfix">
+            <h2 class="mgt">Search Here</h2>
+            <form method="get" action="blog.php">
+              <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Search" value="">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+            </form>
+            <br>
+            <h2>Recent Posts</h2>
+            <ul>
+              <?php foreach ($recent_posts as $rp): ?>
+                <li>
+                  <a href="blog_detail.php?id=<?php echo (int)$rp['id']; ?>">
+                    <i class="fa fa-chevron-right"></i> <?php echo htmlspecialchars($rp['title']); ?>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          <br>
+          <div class="blog_1r1 clearfix">
+            <h2>Popular Posts</h2>
+            <?php foreach ($popular_posts as $pp): ?>
+              <div class="blog_1r1i clearfix">
+                <a href="blog_detail.php?id=<?php echo (int)$pp['id']; ?>">
+                  <img src="<?php echo htmlspecialchars($pp['image'] ? $pp['image'] : 'img/default_blog.jpg'); ?>" class="iw" alt="<?php echo htmlspecialchars($pp['title']); ?>">
+                </a>
+                <h5>
+                  <a href="blog_detail.php?id=<?php echo (int)$pp['id']; ?>">
+                    <span class="span_1">
+                      <?php
+                        echo !empty($pp['published_date'])
+                          ? date('d M', strtotime($pp['published_date']))
+                          : '';
+                      ?>
+                    </span>
+                    by <?php echo htmlspecialchars($pp['author'] ?? 'admin'); ?>
+                    <span class="pull-right span_2"><i class="fa fa-comment-o"></i> 0</span>
+                  </a>
+                </h5>
+                <h5 class="bold">
+                  <a href="blog_detail.php?id=<?php echo (int)$pp['id']; ?>">
+                    <?php echo htmlspecialchars($pp['title']); ?>
+                  </a>
+                </h5>
+                <p><?php
+                  $excerpt2 = isset($pp['content']) ? strip_tags($pp['content']) : '';
+                  echo (mb_strlen($excerpt2) > 70) ? mb_substr($excerpt2, 0, 70) . "..." : $excerpt2;
+                ?></p>
+              </div>
+              <br>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-  
- </div>
 </section>
 
 <?php
-	include 'footer.php';
+  include 'footer.php';
 ?>
 
 </body>
- 
 </html>

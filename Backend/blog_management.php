@@ -107,6 +107,7 @@ class BlogManager {
         if ($get_img_stmt) {
             $get_img_stmt->bind_param('i', $id);
             $get_img_stmt->execute();
+            $del_img = null;
             $get_img_stmt->bind_result($del_img);
             if ($get_img_stmt->fetch() && !empty($del_img)) {
                 $img_path = __DIR__ . '/../Frontend/' . $del_img;
@@ -151,6 +152,7 @@ class BlogManager {
                 if ($get_img_stmt) {
                     $get_img_stmt->bind_param('i', $edit_id);
                     $get_img_stmt->execute();
+                    $del_img = null;
                     $get_img_stmt->bind_result($del_img);
                     if ($get_img_stmt->fetch() && !empty($del_img)) {
                         $img_path = __DIR__ . '/../Frontend/' . $del_img;
@@ -188,7 +190,7 @@ class BlogManager {
 
     public function fetchBlogs() {
         $blogs = [];
-        $result = $this->conn->query("SELECT * FROM blogs_management ORDER BY published_date DESC, id DESC");
+        $result = $this->conn->query("SELECT * FROM blogs_management ORDER BY published_date ASC, id DESC");
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 $blogs[] = $row;

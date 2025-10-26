@@ -188,18 +188,17 @@ margin-right:auto;
  color:#ddd;
  text-transform:uppercase;
  font-size:15px;
+ 
  border-right:1px solid #51586d;
  }
 .font_tag:hover{
 color:#fff;
 background:#51586d!important;
-color:#fff; 
- }
+}
 .font_tag:focus{
 color:#fff;
 background:#51586d!important;
-color:#fff; 
- }
+}
 .active_tab{
 background:#51586d;
 color:#fff; 
@@ -212,16 +211,7 @@ padding-top:13px;
 #header .navbar-brand{
 display:none; 
  }
-.drop_1{
-background:#fff!important;
-min-width:200px;
-padding:0;
-border-radius:0;
- }
-.drop_1 li a:hover{
- background:none;
- color:#f47629;
- }
+
 .drop_1 li a{
 border-bottom:1px solid #ddd;
 padding-top:13px;
@@ -234,6 +224,7 @@ text-transform:uppercase;
  padding-right:0;
  }
 /*********************header_end****************/
+
 
 /*********************footer****************/
 #footer{

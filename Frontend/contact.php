@@ -24,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail = new PHPMailer(true);
             try {
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com';
+                $mail->Host       = 'smtp.gmail.com'; 
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'umangmodi003@gmail.com';
-                $mail->Password   = 'uopekabpdrbuovwn';
+                $mail->Username   = 'umangmodi003@gmail.com'; // FROM 
+                $mail->Password   = 'uopekabpdrbuovwn'; // Token SMTP 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
                 $mail->CharSet    = 'UTF-8';
@@ -103,7 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		  <h6>Home / Contact</h6>
 
 		  <?php
-		      // Show contact us form feedback message, if any
 		      if (!empty($contact_message)) {
 		          echo $contact_message;
 		      }
