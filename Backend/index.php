@@ -26,11 +26,10 @@ $user_email = $_SESSION['user_email'];
 <body>
 <div class="container-fluid" style="padding-left:0; padding-right:0;">
     <div class="row no-gutters">
-        <!-- Sidebar -->
         <nav class="col-md-2 d-none d-md-block admin-sidebar">
             <div class="position-sticky" style="padding-top:44px; min-height:90vh;">
                 <div style="font-size:1.23rem; text-align:center; margin-bottom:50px; letter-spacing:2px;">
-                    <span style="font-weight:bold; color:#fff;">ADMIN</span>
+                    <span style="font-weight:bold; color:#fff;">ADMIN PANEL</span>
                 </div>
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -39,18 +38,13 @@ $user_email = $_SESSION['user_email'];
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-pencil-square-o" style="margin-right:12px;"></i> Manage Posts
+                        <a class="nav-link" href="contact_us.php">
+                            <i class="fa fa-pencil-square-o" style="margin-right:12px;"></i> Contact Messages
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-users" style="margin-right:12px;"></i> Users
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-cogs" style="margin-right:12px;"></i> Settings
+                        <a class="nav-link" href="blog_management.php">
+                            <i class="fa fa-users" style="margin-right:12px;"></i> Blog Management
                         </a>
                     </li>
                 </ul>
@@ -74,63 +68,49 @@ $user_email = $_SESSION['user_email'];
             </div>
             <div class="admin-content">
                 <div class="admin-panel-title"><i class="fa fa-dashboard"></i> Dashboard</div>
+                <hr>
                 <div class="row">
-                    <!-- Quick Stats Cards -->
+                    <?php
+                        require_once __DIR__ . '/Database/connection.php';
+                        $msg_count = 0;
+                        $sql = "SELECT COUNT(*) as total FROM contacts";
+                        if ($result = $conn->query(query: $sql)) {
+                            if ($row = $result->fetch_assoc()) {
+                                $msg_count = $row['total'];
+                            }
+                            $result->free();
+                        }
+                    ?>
                     <div class="col-md-4 mb-4">
                         <div class="card" style="border: none; box-shadow: 0 4px 16px #e2e7fa;">
                             <div class="card-body">
-                                <h5 class="card-title" style="color: #3c59e7;"><i class="fa fa-pencil"></i> Posts</h5>
-                                <h2 style="font-weight:bold;">12</h2>
-                                <p class="card-text" style="color: #666;">Total posts in the system</p>
+                                <h5 class="card-title" style="color: #3c59e7;"><i class="fa fa-pencil"></i> Contact Us Messages</h5>
+                                <h2 style="font-weight:bold;"><?php echo htmlspecialchars($msg_count); ?></h2>
+                                <p class="card-text" style="color: #666;">Total Contact Us Messages</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="card" style="border: none; box-shadow: 0 4px 16px #e2e7fa;">
                             <div class="card-body">
-                                <h5 class="card-title" style="color: #3c59e7;"><i class="fa fa-users"></i> Users</h5>
-                                <h2 style="font-weight:bold;">4</h2>
-                                <p class="card-text" style="color: #666;">Admins and content editors</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card" style="border: none; box-shadow: 0 4px 16px #e2e7fa;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #3c59e7;"><i class="fa fa-comments"></i> Comments</h5>
-                                <h2 style="font-weight:bold;">153</h2>
-                                <p class="card-text" style="color: #666;">New comments this month</p>
+                            <?php
+                                require_once __DIR__ . '/Database/connection.php';
+                                $msg_counts = 0;
+                                $sql = "SELECT COUNT(*) as total FROM blogs_management";
+                                if ($result = $conn->query(query: $sql)) {
+                                    if ($row = $result->fetch_assoc()) {
+                                        $msg_counts = $row['total'];
+                                    }
+                                    $result->free();
+                                }
+                            ?>
+                                <h5 class="card-title" style="color: #3c59e7;"><i class="fa fa-users"></i> Blogs</h5>
+                                <h2 style="font-weight:bold;"><?php echo htmlspecialchars($msg_counts); ?></h2></h2>
+                                <p class="card-text" style="color: #666;">Total Blogs Uploaded</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Quick Stats -->
-                <div style="margin-top:44px;">
-                    <h4 style="color:#222859; font-weight:600;"><i class="fa fa-bolt"></i> Quick Actions</h4>
-                    <div class="row">
-                        <div class="col-md-3 col-6" style="padding: 18px 10px;">
-                            <a href="#" class="btn btn-outline-primary btn-block" style="width:100%; font-weight:600;">
-                                <i class="fa fa-plus"></i> New Post
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-6" style="padding: 18px 10px;">
-                            <a href="#" class="btn btn-outline-success btn-block" style="width:100%; font-weight:600;">
-                                <i class="fa fa-user-plus"></i> Add User
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-6" style="padding: 18px 10px;">
-                            <a href="#" class="btn btn-outline-warning btn-block" style="width:100%; font-weight:600;">
-                                <i class="fa fa-cogs"></i> Settings
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-6" style="padding: 18px 10px;">
-                            <a href="#" class="btn btn-outline-info btn-block" style="width:100%; font-weight:600;">
-                                <i class="fa fa-eye"></i> View Site
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Maybe place more admin widgets here -->
             </div>
         </main>
     </div>
